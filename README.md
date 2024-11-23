@@ -33,7 +33,24 @@ The dataset comprises 4,752 labeled images of waste, with each image sized at **
 
 ## **Project Highlights**
 
-1. **Dataset Exploration**
+1. **Dataset Exploration - Tackling dataset imbalanceness**
+   
 The RealWaste dataset is explored ,providing insights into the distribution and characteristics of the data. Given the **imbalanceness** of the dataset the ``class_weight`` is implemented to force the model to pay more/less attention to the classes based on their frequency. 
+
+2. **Data Augmentation**
+   
+Data augmentation is a technique used to artificially increase the size of a training dataset by applying various transformations to the existing data. It usually adopted to ensure the **robustness** and **generalization** of the model.
+
+In this specific case I will apply the following transformations: 
+  * Horizontal flip 
+  * Rotate 
+  * Shear
+
+2. **Different models tried**
+   Different type of models are implemented, trained and evaluated.
+     * **Convolutional Neural Networks**:
+         * **Base-DeepCNN**: base model, with three blocks of feature extraction (convolution+pooling+batch-normalization) followed by a classifier.
+         * **Deep-CNN with Residual Connections and Depthwise Separable Convolutions**: residual connections are adopted to tackle the problem of vanishing gradients, while deptwhise separable              convolutions to get a smaller model that *converges faster* and is *less prone to overfitting*
+
 
 ---
