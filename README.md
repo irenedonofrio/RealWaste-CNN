@@ -2,8 +2,8 @@
 
 ## **Overview**
 This project focuses on building a deep learning model for **multiclass image classification** of waste materials using the **RealWaste** dataset, which was sourced from waste received at the Whyte's Gully Waste and Resource Recovery facility in Wollongong, NSW, Australia.
-Deep CNNs and Transfer Learning modes have been implemented trained on the train test and evaluated on the validation test. The best performing model is then tested. 
-
+The project explores both Deep CNNs and Transfer Learning techniques. Models are trained on the training dataset and evaluated on the validation set. The best-performing model, DenseNet121-FT, is further tested on the test set.
+Transfer learning is implemented using two approaches: feature extraction and fine-tuning to optimize performance.
 
 ---
 
@@ -37,28 +37,29 @@ It is a comprehensive dataset that covers various classes of landfilled waste fo
 
 1. **Dataset Exploration - Tackling dataset imbalanceness**
    
-The RealWaste dataset is explored ,providing insights into the distribution and characteristics of the data. Given the **imbalanceness** of the dataset the ``class_weight`` is implemented to force the model to pay more/less attention to the classes based on their frequency. 
+  The RealWaste dataset is explored ,providing insights into the distribution and characteristics of the data. Given the **imbalanceness** of the dataset the ``class_weight`` is implemented to     force the model to pay more/less attention to the classes based on their frequency. 
 
 2. **Data Augmentation**
    
-Data augmentation is a technique used to artificially increase the size of a training dataset by applying various transformations to the existing data. It usually adopted to ensure the **robustness** and **generalization** of the model.
+  Data augmentation is a technique used to artificially increase the size of a training dataset by applying various transformations to the existing data. It usually adopted to ensure the           **robustness** and **generalization** of the model.
 
-In this specific case I will apply the following transformations: 
-  * Horizontal flip 
-  * Rotate 
-  * Shear
+  In this specific case I will apply the following transformations: 
+    * Horizontal flip 
+    * Rotate 
+    * Shear
 
 2. **Different models tried**
    
    Different type of models are implemented, trained and evaluated.
      * **Convolutional Neural Networks**:
-         * **Base-DeepCNN**: base model, with three blocks of feature extraction (convolution+pooling+batch-normalization) followed by a classifier.
-         * **Deep-CNN with Residual Connections and Depthwise Separable Convolutions**: residual connections are adopted to tackle the problem of vanishing gradients, while deptwhise separable              convolutions to get a smaller model that *converges faster* and is *less prone to overfitting*
+         * **Base-DeepCNN**: A simple architecture with three feature extraction blocks (convolution + pooling + batch normalization) followed by a classifier.
+         * **Deep-CNN with Residual Connections and Depthwise Separable Convolutions**: Incorporates residual connections to mitigate vanishing gradient issues and depthwise separable                       convolutions for a smaller, faster-converging, and less overfitting-prone model.
     
     * **Transfer learning**:
       Transfer learning consists in reusing a model which has been already trained on a large dataset (and thus it is a generic model) for our purposes. I adopted the two pre-trained models that       performed the best in the original paper:
         * **InceptionV3**
         * **DenseNet121**
-
-
+          
+## **Project Highlights**
+Packages and version are in ``conda.yaml``
 ---
