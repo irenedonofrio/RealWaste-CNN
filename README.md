@@ -50,7 +50,7 @@ It is a comprehensive dataset that covers various classes of landfilled waste fo
     * Rotate 
     * Shear
 
-2. **Different models tried**
+2. **Model Development**
    
    Different type of models are implemented, trained and evaluated.
      * **Convolutional Neural Networks**:
