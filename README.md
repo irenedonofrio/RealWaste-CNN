@@ -30,6 +30,8 @@ It is a comprehensive dataset that covers various classes of landfilled waste fo
 
 - **Dataset Source**:  
   [UC Irvine Machine Learning Repository](https://archive.ics.uci.edu/)
+  
+  Dataset URL: https://archive.ics.uci.edu/static/public/908/realwaste.zip
 
 ---
 
