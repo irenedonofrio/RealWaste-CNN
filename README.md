@@ -61,7 +61,7 @@ It is a comprehensive dataset that covers various classes of landfilled waste fo
       Transfer learning consists in reusing a model which has been already trained on a large dataset (and thus it is a generic model) for our purposes. I adopted the two pre-trained models that       performed the best in the original paper:
         * **InceptionV3**
         * **DenseNet121**
-          
-## **Project Highlights**
-Packages and version are in ``conda.yaml``
+
+
+
 ---
